@@ -69,36 +69,3 @@ if (isset($_POST['login']))
 
 </body>
 </html>
-
-<!-- 
-
-$username = mysqli_real_escape_string($con, $_POST['user']);
-			$password = mysqli_real_escape_string($con, $_POST['pass']);
-			$query 		= "SELECT * FROM `login` WHERE  pass='$password' and usname='$username'";
-			$result     = mysqli_query($con,$query);
-			$row		= mysqli_fetch_array($result);
-
-			if($result)
-			{
-				if ($row['is_active'] == 1) 
-				{			
-					$_SESSION['us_name']  = $row['usname'];
-					$_SESSION['us_email']  = $row['u_email'];
-					$_SESSION['user_id']=$row['user_id'];
-					header('location:home.php');
-					}
-				else
-					{
-						echo"
-							<script>alert('User already verified');
-							window.location.href='index.php';
-							</script>
-							"; 
-					}
-			}
-			else
-			{
-				echo 'Invalid Username and Password Combination';
-			}
-		}
- -->
